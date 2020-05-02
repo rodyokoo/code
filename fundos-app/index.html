@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Fundos</title>
+  </head>
+  <body>
+    <h1>Quantificando suas economias</h1>
+    <p>Diga o quanto deseja investir e lhe diremos o seu retorno.</br>
+    O valor de cada cota do fundo é de R$ 15,00.</br>
+    Cada cota possuiu um retorno de R$ 0,12 no último mês.</p>
+    <label>
+      Valor Investido: <input id="valorInvestido" type="text" 
+      onkeypress="return(moeda(this,'.',',',event))"></br>
+    </label>
+    <span id="cotas"></span></br>
+    <span id="retorno"></span></br>
+    <span id="valorNaoUtilizado"></span>
+    <script src="./js/moeda.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
