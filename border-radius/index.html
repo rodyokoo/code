@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Border Radius</title>
+  </head>
+  <body>
+    <div>
+      Select your border style:<br />
+      <div id="square"></div>
+      <br />
+
+      <input type="submit" onclick="toTopLeft25()" value="Top Left 25%" />
+      <input type="submit" onclick="toTopLeft50()" value="Top Left 50%" />
+      <input type="submit" onclick="toTopRight25()" value="Top Right 25%" />
+      <input type="submit" onclick="toTopRight50()" value="Top Right 50%" />
+      <input type="submit" onclick="toBottomLeft25()" value="Bottom Left 25%" />
+      <input type="submit" onclick="toBottomLeft50()" value="Bottom Left 50%" />
+      <input
+        type="submit"
+        onclick="toBottomRight25()"
+        value="Bottom Right 25%"
+      />
+      <input
+        type="submit"
+        onclick="toBottomRight50()"
+        value="Bottom Right 50%"
+      />
+      <input type="submit" onclick="toReset()" value="Reset" />
+      <input type="submit" onclick="cssWrite()" value="Your CSS" /><br />
+      <spam id="topLeftRadius"></spam><br />
+      <spam id="topRightRadius"></spam><br />
+      <spam id="bottomLeftRadius"></spam><br />
+      <spam id="bottomRightRadius"></spam><br />
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

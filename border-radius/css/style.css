@@ -1,0 +1,8 @@
+#square {
+  width: 30px;
+  height: 30px;
+  border: solid 2px;
+  display: flex;
+  margin: 4px;
+  /*border-top-left-radius: 0%;*/
+}
