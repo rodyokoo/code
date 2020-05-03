@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    Calculator:<br />
+    <input
+      type="text"
+      id="entry"
+      maxlength="8"
+      onkeypress="return onlyNum(event)"
+    /><br />
+    <button onclick="numClear()">C</button>
+    <button onclick="numClearAll()">AC</button>
+    <button onclick="numPlus()">+</button>
+    <br />
+    <button onclick="num1()">1</button>
+    <button onclick="num2()">2</button>
+    <button onclick="num3()">3</button>
+    <button onclick="numMinus()">-</button>
+    <br />
+    <button onclick="num4()">4</button>
+    <button onclick="num5()">5</button>
+    <button onclick="num6()">6</button>
+    <button onclick="numTimes()">*</button>
+    <br />
+    <button onclick="num7()">7</button>
+    <button onclick="num8()">8</button>
+    <button onclick="num9()">9</button>
+    <button onclick="numDivided()">-</button>
+    <br />
+    <button onclick="num0()">0</button>
+    <button onclick="numDot()">.</button>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
