@@ -59,3 +59,6 @@ function num0() {
   var num0 = '0';
   document.getElementById('entry').value = entry + num0;
 }
+function numClearAll() {
+  location.realoadtrue();
+}
