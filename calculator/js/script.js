@@ -9,6 +9,14 @@ var onlyNum = function (event) {
 };
 
 var entry;
+
+function numClearAll() {
+  location.reload();
+}
+
+function numClear() {
+  document.getElementById('entry').value = '';
+}
 function num1() {
   entry = document.getElementById('entry').value;
   var num1 = '1';
@@ -59,6 +67,80 @@ function num0() {
   var num0 = '0';
   document.getElementById('entry').value = entry + num0;
 }
-function numClearAll() {
-  location.realoadtrue();
+
+function numDot() {
+  entry = document.getElementById('entry').value;
+  if (entry === '') {
+    var numDot = '0.';
+    document.getElementById('entry').value = entry + numDot;
+  } else if (entry.split('').indexOf('.') !== -1) {
+    document.getElementById('entry').value = entry;
+  } else {
+    var numDot = '.';
+    document.getElementById('entry').value = entry + numDot;
+  }
 }
+
+var plusEntry = '';
+function numPlus() {
+  plusEntry = parseFloat(document.getElementById('entry').value, 10);
+  document.getElementById('entry').value = '';
+}
+document.addEventListener('keydown', function (event) {
+  if (event.keyCode !== 107) return;
+  numPlus();
+});
+
+var minusEntry = '';
+function numMinus() {
+  minusEntry = parseFloat(document.getElementById('entry').value, 10);
+  document.getElementById('entry').value = '';
+}
+document.addEventListener('keydown', function (event) {
+  if (event.keyCode !== 109) return;
+  numMinus();
+});
+
+var timesEntry = '';
+function numTimes() {
+  timesEntry = parseFloat(document.getElementById('entry').value, 10);
+  document.getElementById('entry').value = '';
+}
+/*document.addEventListener('keydown', function (event) {
+  if (event.keyCode !== 106) return;
+  numTimes();
+});*/
+
+var divEntry = '';
+function numDivided() {
+  divEntry = parseFloat(document.getElementById('entry').value, 10);
+  document.getElementById('entry').value = '';
+}
+document.addEventListener('keydown', function (event) {
+  if (event.keyCode !== 111) return;
+  numDivided();
+});
+
+var equal;
+function numEqual() {
+  if (plusEntry !== '') {
+    equal = plusEntry + parseFloat(document.getElementById('entry').value, 10);
+    document.getElementById('entry').value = equal;
+  }
+  if (minusEntry !== '') {
+    equal = minusEntry - parseFloat(document.getElementById('entry').value, 10);
+    document.getElementById('entry').value = equal;
+  }
+  if (timesEntry !== '') {
+    equal = timesEntry * parseFloat(document.getElementById('entry').value, 10);
+    document.getElementById('entry').value = equal;
+  }
+  if (divEntry !== '') {
+    equal = divEntry / parseFloat(document.getElementById('entry').value, 10);
+    document.getElementById('entry').value = equal;
+  }
+}
+document.addEventListener('keydown', function (event) {
+  if (event.keyCode !== 13) return;
+  numEqual();
+});
