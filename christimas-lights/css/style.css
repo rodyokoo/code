@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+}
+
+.lights {
+  border-radius: 50%;
+  list-style: none;
+  display: inline-table;
+  padding: 10px;
+  margin: 10px;
+}
+
+#red {
+  background-color: red;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#purple {
+  background-color: purple;
+}
+
+#magenta {
+  background-color: magenta;
+}
