@@ -1,0 +1,38 @@
+var person = [
+  {
+    name: 'Rodrigo',
+    street: 'João Pessoa Street',
+    city: 'Campo Grande',
+    state: 'MS',
+    country: 'Brazil',
+    telephone: '888888888881',
+    birthday: '06/04',
+  },
+  {
+    name: 'Flávia',
+    street: 'João Pessoa Street',
+    city: 'Campo Grande',
+    state: 'MS',
+    country: 'Brazil',
+    telephone: '99999999',
+    birthday: '12/12',
+  },
+  {
+    name: 'Sérgio',
+    street: 'Céu Street',
+    city: 'Barra do Garças',
+    state: 'MT',
+    country: 'Brazil',
+    telephone: '98899999',
+    birthday: '04/12',
+  },
+  {
+    name: 'Édna',
+    street: 'Barra Street',
+    city: 'Rio de Janeiro',
+    state: 'RJ',
+    country: 'Brazil',
+    telephone: '90099999',
+    birthday: '15/06',
+  },
+];
