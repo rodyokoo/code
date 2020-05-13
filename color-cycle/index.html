@@ -8,12 +8,12 @@
   </head>
   <body>
     <div>
-      <input id="red" type="number" min="0" max="255" />
+      <input id="red" type="text" onkeypress="red()" <--maxlength="3" />
       <button onclick="red()">Start!</button>
-      <input id="green" type="number" min="0" max="255" />
+      <input id=green" type="text" onkeypress=green()" maxlength="3" />
       <button onclick="green()">Start!</button>
-      <input id="blue" type="number" min="0" max="255" />
-      <button onclick="red()">Start!</button>
+      <input id="blue" type="text" onkeypress="blue()" maxlength="3" />
+      <button onclick="blue()">Start!</button>
     </div>
     <div id="body"></div>
     <script src="./js/script.js"></script>
