@@ -7,14 +7,37 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <input id="red" type="text" onkeypress="red()" <--maxlength="3" />
-      <button onclick="red()">Start!</button>
-      <input id=green" type="text" onkeypress=green()" maxlength="3" />
-      <button onclick="green()">Start!</button>
-      <input id="blue" type="text" onkeypress="blue()" maxlength="3" />
-      <button onclick="blue()">Start!</button>
+    <!-- first fail version
+      <div class="colors">
+      <input id="red" type="number" /><br />
+      <div class="square" id="redSquare"></div>
     </div>
+    <div class="colors">
+      <input id="green" type="number" />
+      <div class="square" id="greenSquare"></div>
+    </div>
+    <div class="colors">
+      <input id="blue" type="number" />
+      <div class="square" id="blueSquare"></div>
+    </div>-->
+    <div>
+      <div class="colors">
+        <input id="red" type="range" min="0" max="255" value="122" />
+        <div class="square" id="redSquare"></div>
+      </div>
+      <div class="colors">
+        <input id="green" type="range" min="0" max="255" value="122" />
+        <div class="square" id="greenSquare"></div>
+      </div>
+      <div class="colors">
+        <input id="blue" type="range" min="0" max="255" value="122" />
+        <div class="square" id="blueSquare"></div>
+      </div>
+      <div class="colors" id="bigSquare"></div>
+    </div>
+    <br />
+    <button id="startButton">RGB</button><br />
+    <span id="rgb"></span>
     <div id="body"></div>
     <script src="./js/script.js"></script>
   </body>
