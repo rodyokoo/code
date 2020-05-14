@@ -73,7 +73,9 @@ function bigSquare(red, green, blue) {
   document.getElementById('startButton').addEventListener('click', function () {
     if (typeof blue === 'undefined') {
       document.querySelector('#rgb').textContent = 'RGB(122, 122, 122)';
-      console.log('click');
+    } else {
+      document.querySelector('#rgb').textContent =
+        'RGB(' + red + ', ' + green + ', ' + blue + ')';
     }
   });
 }
