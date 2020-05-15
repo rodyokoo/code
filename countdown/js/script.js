@@ -4,4 +4,5 @@ function start() {
 }
 document.getElementById('startButton').addEventListener('click', function () {
   let fut = document.getElementById('date').value;
+  console.log(fut);
 });
