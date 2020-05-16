@@ -20,7 +20,17 @@ function year(year, mouth, day) {
     mouthNum = 0;
   } else if (mouth === 2) {
     mouthNum = 31;
-  }
+  } else if (mouth === 3){
+    if (year % 4 === 0){
+      if (year % 400 !== 0){
+        mouthNum = 59;
+      } else {
+        mouthNum = 60;
+      }
+    } else {
+      mouthNum = 59;
+    }
+  } else if (mouth === )
   console.log(yearNum);
   console.log(mouthNum);
   console.log(yearNum + mouthNum);
