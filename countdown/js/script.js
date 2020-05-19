@@ -16,7 +16,9 @@ document.getElementById('startButton').addEventListener('click', function () {
   document.getElementById('dateLeft').innerHTML =
     future - present + ' day(s) to your dead line';
   let time = document.getElementById('time').value;
+  let todayTime = [today.getHours(), today.getMinutes(), today.getSeconds()];
   console.log(time);
+  console.log(todayTime[0] + ':' + todayTime[1] + ':' + todayTime[2]);
 });
 
 function totalDays(year, month, day) {
