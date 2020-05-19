@@ -5,13 +5,13 @@ function start() {
 document.getElementById('startButton').addEventListener('click', function () {
   let futureDate = document.getElementById('date').value;
   let arrDate = futureDate.split('-');
-  let futureYear = parseInt(arrDate[0], 10);
-  let futureMonth = parseInt(arrDate[1], 10);
-  let futureDay = parseInt(arrDate[2], 10);
-  console.log(futureYear + '-' + futureMonth + '-' + futureDay);
   let today = new Date();
   let todayDate = [today.getFullYear(), today.getMonth() + 1, today.getDate()];
-  let future = totalDays(futureYear, futureMonth, futureDay);
+  let future = totalDays(
+    parseInt(arrDate[0], 10),
+    parseInt(arrDate[1], 10),
+    parseInt(arrDate[2], 10)
+  );
   let present = totalDays(todayDate[0], todayDate[1], todayDate[2]);
   document.getElementById('dateLeft').innerHTML =
     future - present + ' day(s) to your dead line';
@@ -63,3 +63,5 @@ function totalDays(year, month, day) {
   let dayNum = day;
   return yearNum + monthNum + dayNum;
 }
+
+function houts() {}
