@@ -24,6 +24,13 @@ document.getElementById('startButton').addEventListener('click', function () {
   let presentHours = hours(todayTime[0], todayTime[1], todayTime[2]);
   let futureHours = hours(parseInt(time[0], 10), parseInt(time[1], 10), 0);
   console.log(futureHours - presentHours);
+  let cron = futureHours - presentHours;
+  setInterval(function () {
+    console.log(cron - 1);
+    if (cron > 1) {
+      cron--;
+    }
+  }, 1000);
 });
 
 function totalDays(year, month, day) {
