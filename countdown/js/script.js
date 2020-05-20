@@ -13,12 +13,17 @@ document.getElementById('startButton').addEventListener('click', function () {
     parseInt(arrDate[2], 10)
   );
   let present = totalDays(todayDate[0], todayDate[1], todayDate[2]);
-  document.getElementById('dateLeft').innerHTML =
-    future - present + ' day(s) to your dead line';
-  let time = document.getElementById('time').value;
+  if (future - present < 0) {
+    document.getElementById('dateLeft').innerHTML = 'you lose your dead line';
+  } else if (future - present > 0) {
+    document.getElementById('dateLeft').innerHTML =
+      future - present + ' day(s) to your dead line!';
+  }
+  let time = document.getElementById('time').value.split(':');
   let todayTime = [today.getHours(), today.getMinutes(), today.getSeconds()];
-  console.log(time);
-  console.log(todayTime[0] + ':' + todayTime[1] + ':' + todayTime[2]);
+  let presentHours = hours(todayTime[0], todayTime[1], todayTime[2]);
+  let futureHours = hours(parseInt(time[0], 10), parseInt(time[1], 10), 0);
+  console.log(futureHours - presentHours);
 });
 
 function totalDays(year, month, day) {
@@ -66,4 +71,8 @@ function totalDays(year, month, day) {
   return yearNum + monthNum + dayNum;
 }
 
-function houts() {}
+function hours(hours, minutes, seconds) {
+  let cron = [hours, minutes, seconds];
+  return seconds + minutes * 60 + hours * 60 * 60;
+}
+
