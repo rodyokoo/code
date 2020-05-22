@@ -31,6 +31,7 @@ document.getElementById('startButton').addEventListener('click', function () {
       cron--;
     }
   }, 1000);
+  form.reset();
 });
 
 function totalDays(year, month, day) {
@@ -82,4 +83,3 @@ function hours(hours, minutes, seconds) {
   let cron = [hours, minutes, seconds];
   return seconds + minutes * 60 + hours * 60 * 60;
 }
-
