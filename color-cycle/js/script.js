@@ -51,6 +51,7 @@ red.addEventListener('input', function () {
   document.getElementById('redSquare').style.backgroundColor =
     'rgb(' + parseInt(red.value, 10) + ', 0,0)';
   bigSquare(red.value, green.value, blue.value);
+  document.getElementById('numRed').value = red.value;
 });
 
 let green = document.getElementById('green');
@@ -58,6 +59,7 @@ green.addEventListener('input', function () {
   document.getElementById('greenSquare').style.backgroundColor =
     'rgb(0, ' + parseInt(green.value, 10) + ',0)';
   bigSquare(red.value, green.value, blue.value);
+  document.getElementById('numGreen').value = green.value;
 });
 
 let blue = document.getElementById('blue');
@@ -65,6 +67,7 @@ blue.addEventListener('input', function () {
   document.getElementById('blueSquare').style.backgroundColor =
     'rgb(0, 0, ' + parseInt(blue.value, 10) + ')';
   bigSquare(red.value, green.value, blue.value);
+  document.getElementById('numBlue').value = blue.value;
 });
 
 function bigSquare(red, green, blue) {
