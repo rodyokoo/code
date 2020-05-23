@@ -16,6 +16,10 @@ input[type='number'] {
 .colors {
   float: left;
   margin: 10px;
+  position: relative;
+  display: table;
+  vertical-align: center;
+  display: table-cell;
 }
 
 .square {
