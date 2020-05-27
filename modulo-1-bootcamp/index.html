@@ -7,11 +7,16 @@
   </head>
   <body>
     <h1>Pesquisa de usuários</h1>
-    <input id="buscaTexto" type="text" value="busca" />
-    <input id="buscaBotao" type="button" value="busca" /><br />
-    <input id="usuarioInfo" type="text" value="nenhum usuário encontrado" />
-    <ul id="usuario"></ul>
-    <input id="informacoes" type="text" value="nada a ser exibido" />
+    <input id="buscaTexto" type="text" />
+    <input
+      id="buscaBotao"
+      type="button"
+      value="busca"
+      onclick="searchText()"
+    /><br />
+    <input id="usuarioInfo" type="text" />
+
+    <input id="informacoes" type="text" />
     <script src="./js/people.js"></script>
     <script src="./js/script.js"></script>
   </body>
