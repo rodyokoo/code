@@ -29,7 +29,9 @@ function searchResult() {
   let lastResult = people.results.filter((personSearch) =>
     personSearch.name.last.toLowerCase().includes(person)
   );
-  personResult = [...firstResult, ...lastResult];
+  const personResult0 = [...firstResult, ...lastResult];
+  const setUnico = new Set(personResult0);
+  personResult = [...setUnico];
   info(personResult);
 }
 
