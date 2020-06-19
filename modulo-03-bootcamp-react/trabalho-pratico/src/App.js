@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './components/header/Header';
-function App() {
-  return (
-    <div>
-      <h2>React Salário</h2>
 
-      <Header />
-    </div>
-  );
+export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      salary: '',
+    };
+  }
+  render() {
+    return (
+      <div>
+        <h2>React Salário</h2>
+
+        <Header />
+      </div>
+    );
+  }
 }
-
-export default App;

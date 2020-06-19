@@ -4,7 +4,7 @@ export default class Header extends Component {
   render() {
     const { salary } = this.props;
     return (
-      <div>
+      <div className="container">
         <h3>Salário Bruto</h3>
         <input type="number" value={salary} />
       </div>
